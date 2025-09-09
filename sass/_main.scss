@@ -106,7 +106,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.16);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.16);
     // border: 1px solid $BorderFocus;
   }
 
@@ -155,6 +155,61 @@
     color: $TextDef;
     font-weight: 500;
   }
+}
+.cv__caption{
+  margin-bottom: 16px;
+}
+.cv__card{
+  display: flex;
+  border: 1px solid $BorderDef;
+  color: $TextDef;
+  background-color: $BgWhite;
+  transition: all 0.3s ease-in-out;
+  @include sp{
+    flex-direction: column;
+  }
+  &:hover{
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.16);
+  }
+}
+.cv__img{
+  width: 40%;
+  @include tab{
+    width: 50%;
+  }
+  @include sp{
+    width: 100%;
+    order: 1;
+  }
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.cv__text{
+  width: 60%;
+  padding: 20px 32px;
+  @include tab{
+    width: 50%;
+  }
+  @include sp{
+    width: 100%;
+    order: 2;
+    padding: 12px 20px 20px;
+  }
+}
+.cv__text-tag{
+  font-size: 16px;
+  color: $TextSubtle;
+}
+.cv__text-ttl{
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.cv__text-description{
+  font-size: 14px;
+  color: $TextSubtle;
 }
 
 .footer{
