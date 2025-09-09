@@ -350,30 +350,32 @@ select:focus {
 }
 
 .footer__hed {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 16px;
+  font-weight: 500;
   line-height: 1.5;
 }
 
 .footer__list {
-  display: flex;
-  gap: 24px;
   margin-bottom: 24px;
 }
 .footer__list li {
   list-style: none;
+  margin-left: 16px;
+  margin-bottom: 24px;
 }
 .footer__list li a {
-  font-size: 20px;
+  font-size: 16px;
   color: #fff;
   transition: all 0.3s ease;
+  letter-spacing: 0.04em;
 }
 .footer__list li a:hover {
   opacity: 0.7;
 }
 .footer__list li a img {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 .footer__copy {
