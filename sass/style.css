@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-family: "Noto Sans JP", "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #363636;
@@ -144,48 +144,6 @@ input[type=radio]:checked + span::after {
   display: block;
   opacity: 1;
 }
-input[type=checkbox] {
-  display: none;
-}
-input[type=checkbox] + span {
-  display: inline-block;
-  position: relative;
-  padding: 0 0 0 1.2em;
-  margin: 0 0.2em 0;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-input[type=checkbox] + span::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background: #fff;
-  border: 1px solid #363636;
-  border-radius: 2px;
-  width: 1em;
-  height: 1em;
-  display: block;
-}
-input[type=checkbox] + span::after {
-  opacity: 0;
-  transition: opacity 0.3s ease 0s;
-}
-input[type=checkbox]:checked + span::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%) rotate(-45deg);
-  width: 1em;
-  height: 0.6em;
-  margin-top: -0.2em;
-  display: block;
-  border-left: 3px solid #363636;
-  border-bottom: 3px solid #363636;
-  opacity: 1;
-}
 
 select {
   width: 100%;
@@ -214,4 +172,210 @@ select:focus {
 
 .wrapper {
   overflow: hidden;
+}
+
+.container--l {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 24px 40px;
+  background-color: #f9fafc;
+  border-bottom: 1px solid #ddd;
+}
+
+.maincontents {
+  background-color: #f9fafc;
+  padding: 40px;
+}
+@media (max-width: 768px) {
+  .maincontents {
+    padding: 20px;
+  }
+}
+
+.main__ttl {
+  font-size: 40px;
+  line-height: 1.5;
+  color: #363636;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .main__ttl {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+}
+
+.main__subttl {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #707070;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .main__subttl {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 28px 40px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.section__hed2 {
+  font-size: 24px;
+  color: #363636;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .section__hed2 {
+    font-size: 20px;
+  }
+}
+
+.progress {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.progress .bar {
+  height: 10px;
+  background: #eef2ff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress .bar > i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #2563eb;
+  border-radius: inherit;
+  transition: width 0.25s ease;
+}
+.progress small {
+  color: #707070;
+}
+.progress strong {
+  font-weight: 500;
+  color: #363636;
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  transition: all 0.3s ease;
+}
+.item:hover {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.16);
+}
+.item input[type=checkbox] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  inline-size: 20px;
+  block-size: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+.item input[type=checkbox]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+}
+.item input[type=checkbox]::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  transition: transform 0.12s ease;
+  background: #2563eb;
+  border-radius: 2px;
+}
+.item input[type=checkbox]:checked {
+  border-color: #2563eb;
+  background: #fff;
+}
+.item input[type=checkbox]:checked::after {
+  transform: scale(1);
+}
+.item .label {
+  cursor: pointer;
+  flex: 1;
+  font-size: 16px;
+  color: #363636;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: #101010;
+  padding: 40px;
+  color: #fff;
+}
+
+.footer__hed {
+  font-size: 24px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.footer__list {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.footer__list li {
+  list-style: none;
+}
+.footer__list li a {
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.footer__list li a:hover {
+  opacity: 0.7;
+}
+.footer__list li a img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__copy {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

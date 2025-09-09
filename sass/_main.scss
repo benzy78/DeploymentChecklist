@@ -1,0 +1,192 @@
+.header{
+  padding: 24px 40px;
+  background-color: $BgGray;
+  border-bottom: 1px solid $BorderDef;
+}
+
+.maincontents{
+  background-color: $BgGray;
+  padding: 40px;
+  @include sp{
+    padding: 20px;
+  }
+}
+
+.main__ttl{
+  font-size: 40px;
+  line-height: 1.5;
+  color: $TextDef;
+  margin-bottom: 16px;
+  @include sp{
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+}
+.main__subttl{
+  font-size: 20px;
+  line-height: 1.5;
+  color: $TextSubtle;
+  font-weight: bold;
+  margin-bottom: 40px;
+  @include sp{
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.section {
+  background: $BgWhite;
+  border: 1px solid $BorderDef;
+  border-radius: $radius-md;
+  padding: 28px 40px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+  margin-bottom: 40px;
+  @include sp{
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.section__hed2{
+  font-size: 24px;
+  color: $TextDef;
+  margin-bottom: 20px;
+  @include sp{
+    font-size: 20px;
+  }
+}
+
+// 進捗バー
+.progress {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  .bar {
+    height: 10px;
+    background: #eef2ff;
+    border-radius: 999px;
+    overflow: hidden;
+
+    > i {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: $AccentColor;
+      border-radius: inherit;
+      transition: width .25s ease;
+    }
+  }
+
+  small {
+    color: $TextSubtle;
+  }
+
+  strong {
+    font-weight: 500;
+    color: $TextDef;
+  }
+}
+
+// チェックリスト
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.item {
+  border: 1px solid $BorderDef;
+  border-radius: $radius-sm;
+  background: $BgWhite;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.16);
+    // border: 1px solid $BorderFocus;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    inline-size: 20px;
+    block-size: 20px;
+    border: 2px solid $BorderDef;
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    background: $BgWhite;
+    transition: border-color .2s, background-color .2s, box-shadow .2s;
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($AccentColor, .35);
+    }
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      transform: scale(0);
+      transition: transform .12s ease;
+      background: $AccentColor;
+      border-radius: 2px;
+    }
+
+    &:checked {
+      border-color: $AccentColor;
+      background: $BgWhite;
+
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .label {
+    cursor: pointer;
+    flex: 1;
+    font-size: 16px;
+    color: $TextDef;
+    font-weight: 500;
+  }
+}
+
+.footer{
+  background-color: #101010;
+  padding: 40px;
+  color: #fff;
+}
+.footer__hed{
+  font-size: 24px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.footer__list{
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  li{
+    list-style: none;
+    a{
+      font-size: 20px;
+      color: #fff;
+      transition: all 0.3s ease;
+      &:hover{
+        opacity: 0.7;
+      }
+      img{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+.footer__copy{
+  text-align: center;
+}

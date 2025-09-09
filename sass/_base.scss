@@ -16,7 +16,7 @@ body {
 }
 
 body {
-	font-family: $ff-gothic;
+	font-family: $ff-base;
 	font-size: $fz-base;
 	font-weight: $fw-base;
 	color: $MainColor;
@@ -165,55 +165,55 @@ input {
 		}
 	}
 
-	&[type="checkbox"] {
-		display: none;
+	// &[type="checkbox"] {
+	// 	display: none;
 
-		+ span {
-			display: inline-block;
-			position: relative;
-			padding: 0 0 0 1.2em;
-			margin: 0 0.2em 0;
-			cursor: pointer;
-			transition: all 0.3s ease 0s;
+	// 	+ span {
+	// 		display: inline-block;
+	// 		position: relative;
+	// 		padding: 0 0 0 1.2em;
+	// 		margin: 0 0.2em 0;
+	// 		cursor: pointer;
+	// 		transition: all 0.3s ease 0s;
 
-			&::before {
-				position: absolute;
-				content: "";
-				top: 50%;
-				left: 0;
-				transform: translateY(-50%);
-				background: #fff;
-				border: 1px solid $MainColor;
-				border-radius: 2px;
-				width: 1em;
-				height: 1em;
-				display: block;
-			}
+	// 		&::before {
+	// 			position: absolute;
+	// 			content: "";
+	// 			top: 50%;
+	// 			left: 0;
+	// 			transform: translateY(-50%);
+	// 			background: #fff;
+	// 			border: 1px solid $MainColor;
+	// 			border-radius: 2px;
+	// 			width: 1em;
+	// 			height: 1em;
+	// 			display: block;
+	// 		}
 
-			&::after {
-				opacity: 0;
-				transition: opacity 0.3s ease 0s;
-			}
-		}
+	// 		&::after {
+	// 			opacity: 0;
+	// 			transition: opacity 0.3s ease 0s;
+	// 		}
+	// 	}
 
-		&:checked + span {
+	// 	&:checked + span {
 
-			&::after {
-				position: absolute;
-				content: "";
-				top: 50%;
-				left: 0;
-				transform: translateY(-50%) rotate(-45deg);
-				width: 1em;
-				height: 0.6em;
-				margin-top: -0.2em;
-				display: block;
-				border-left: 3px solid $MainColor;
-				border-bottom: 3px solid $MainColor;
-				opacity: 1;
-			}
-		}
-	}
+	// 		&::after {
+	// 			position: absolute;
+	// 			content: "";
+	// 			top: 50%;
+	// 			left: 0;
+	// 			transform: translateY(-50%) rotate(-45deg);
+	// 			width: 1em;
+	// 			height: 0.6em;
+	// 			margin-top: -0.2em;
+	// 			display: block;
+	// 			border-left: 3px solid $MainColor;
+	// 			border-bottom: 3px solid $MainColor;
+	// 			opacity: 1;
+	// 		}
+	// 	}
+	// }
 }
 
 select {

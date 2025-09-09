@@ -5,25 +5,281 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Deplpyment Checklist</title>
-    <meta name="description" content="">
+    <meta name="description" content="Web制作デプロイ前のチェックリストをまとめています">
     <meta name="keywords" content="Web制作チェックリスト">
     <!--style css-->
     <link rel="stylesheet" href="./sass/style.css" media="all">
-    <!--font-awesome-->
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!--jquery-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <!-- wow -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"
         type="text/css" media="all">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="wrapper">
-        <header>
-            <h1>template</h1>
-        </header>
+        <!-- <header class="header">
+            <div class="container--l">
+                <a href="" class="header__logo"><img src="./images/HeaderLogo.svg" alt="Deplpyment Checklist"></a>
+            </div>
+        </header> -->
+        <main class="maincontents">
+            <div class="container">
+                <h1 class="main__ttl">Deployment Checklist</h1>
+                <p class="main__subttl">Web制作デプロイ前のチェックリスト</p>
+
+                <section class="section" aria-labelledby="sec1">
+                    <h2 class="section__hed2">1. 見やすさ・情報伝達</h2>
+
+                    <div class="progress" aria-live="polite">
+                        <div class="bar" aria-hidden="true"><i></i></div>
+                        <div>
+                        <strong class="percent">0%</strong>
+                        <small class="countText">（0 / 8 完了）</small>
+                        </div>
+                    </div>
+
+                    <form id="checklist" class="list">
+                        <label class="item" for="c1-1">
+                            <input id="c1-1" name="c1-1" type="checkbox" />
+                            <span class="label">コントラスト比の基準（WCAG AA基準）を満たしているか</span>
+                        </label>
+
+                        <label class="item" for="c1-2">
+                            <input id="c1-2" name="c1-2" type="checkbox" />
+                            <span class="label">リンクは本文と明確に区別されたデザインになっているか</span>
+                        </label>
+
+                        <label class="item" for="c1-3">
+                            <input id="c1-3" name="c1-3" type="checkbox" />
+                            <span class="label">外部リンク／別タブをアイコン等で示しているか</span>
+                        </label>
+
+                        <label class="item" for="c1-4">
+                            <input id="c1-4" name="c1-4" type="checkbox" />
+                            <span class="label">状態（エラー・成功）を色だけに依存していないか</span>
+                        </label>
+
+                        <label class="item" for="c1-5">
+                            <input id="c1-5" name="c1-5" type="checkbox" />
+                            <span class="label">背景画像・透過上のテキストが読みにくくなっていないか</span>
+                        </label>
+
+                        <label class="item" for="c1-6">
+                            <input id="c1-6" name="c1-6" type="checkbox" />
+                            <span class="label">最小フォントサイズが14px以上か</span>
+                        </label>
+
+                        <label class="item" for="c1-7">
+                            <input id="c1-7" name="c1-7" type="checkbox" />
+                            <span class="label">行間の確保：推奨はline-height 1.5 ~ 2.0</span>
+                        </label>
+
+                        <label class="item" for="c1-8">
+                            <input id="c1-8" name="c1-8" type="checkbox" />
+                            <span class="label">両端揃えを使っていない</span>
+                        </label>
+                    </form>
+                </section><!-- section1 end -->
+
+                <section class="section" aria-labelledby="sec1">
+                    <h2 class="section__hed2">2. インタラクション・操作性</h2>
+
+                    <div class="progress" aria-live="polite">
+                        <div class="bar" aria-hidden="true"><i></i></div>
+                        <div>
+                        <strong class="percent">0%</strong>
+                        <small class="countText">（0 / 12 完了）</small>
+                        </div>
+                    </div>
+
+                    <form id="checklist" class="list">
+                        <label class="item" for="c2-1">
+                            <input id="c2-1" name="c2-1" type="checkbox" />
+                            <span class="label">全機能をキーボードのみで操作可能か</span>
+                        </label>
+
+                        <label class="item" for="c2-2">
+                            <input id="c2-2" name="c2-2" type="checkbox" />
+                            <span class="label">Tabキーでのフォーカス順が画面の見た目と一致しているか</span>
+                        </label>
+
+                        <label class="item" for="c2-3">
+                            <input id="c2-3" name="c2-3" type="checkbox" />
+                            <span class="label">フォーカスリングが見やすいか</span>
+                        </label>
+
+                        <label class="item" for="c2-4">
+                            <input id="c2-4" name="c2-4" type="checkbox" />
+                            <span class="label">hoverだけでなく、focus時もアニメーションが実装されているか</span>
+                        </label>
+
+                        <label class="item" for="c2-5">
+                            <input id="c2-5" name="c2-5" type="checkbox" />
+                            <span class="label">hover/activeのアニメーションに一貫性があるか</span>
+                        </label>
+
+                        <label class="item" for="c2-6">
+                            <input id="c2-6" name="c2-6" type="checkbox" />
+                            <span class="label">十分なクリック/タップ領域の確保：44px × 44px以上を推奨、最低でも32px × 32px以上</span>
+                        </label>
+
+                        <label class="item" for="c2-7">
+                            <input id="c2-7" name="c2-7" type="checkbox" />
+                            <span class="label">タップエリア間が最低16px以上離れているか</span>
+                        </label>
+
+                        <label class="item" for="c2-8">
+                            <input id="c2-8" name="c2-8" type="checkbox" />
+                            <span class="label">重要操作（送信、削除など）には確認ダイアログを設置しているか</span>
+                        </label>
+
+                        <label class="item" for="c2-9">
+                            <input id="c2-9" name="c2-9" type="checkbox" />
+                            <span class="label">フォームにて、入力条件はプレイスホルダーではなく、常に視認できる位置にあるか</span>
+                        </label>
+
+                        <label class="item" for="c2-10">
+                            <input id="c2-10" name="c2-10" type="checkbox" />
+                            <span class="label">フォームで必須項目は明確に表示されているか</span>
+                        </label>
+
+                        <label class="item" for="c2-11">
+                            <input id="c2-11" name="c2-11" type="checkbox" />
+                            <span class="label">フォームでエラー後も入力値を保持しているか</span>
+                        </label>
+
+                        <label class="item" for="c2-12">
+                            <input id="c2-12" name="c2-12" type="checkbox" />
+                            <span class="label">フォームで日付や住所などはセレクトボックスなどの選択式UIを用いているか</span>
+                        </label>
+                    </form>
+                </section><!-- section2 end -->
+
+                <section class="section" aria-labelledby="sec1">
+                    <h2 class="section__hed2">3. コーディング関係</h2>
+
+                    <div class="progress" aria-live="polite">
+                        <div class="bar" aria-hidden="true"><i></i></div>
+                        <div>
+                        <strong class="percent">0%</strong>
+                        <small class="countText">（0 / 7 完了）</small>
+                        </div>
+                    </div>
+
+                    <form id="checklist" class="list">
+                        <label class="item" for="c3-1">
+                            <input id="c3-1" name="c3-1" type="checkbox" />
+                            <span class="label">見出し構造（h1, h2, h3等）が論理的になっているか</span>
+                        </label>
+
+                        <label class="item" for="c3-2">
+                            <input id="c3-2" name="c3-2" type="checkbox" />
+                            <span class="label">セマンティックなHTMLタグを正しく使っているか</span>
+                        </label>
+
+                        <label class="item" for="c3-3">
+                            <input id="c3-3" name="c3-3" type="checkbox" />
+                            <span class="label">HTMLの文法エラーがないか</span>
+                        </label>
+
+                        <label class="item" for="c3-4">
+                            <input id="c3-4" name="c3-4" type="checkbox" />
+                            <span class="label">alt属性を適切に設定しているか（意味のある画像か、装飾目的か）</span>
+                        </label>
+
+                        <label class="item" for="c3-5">
+                            <input id="c3-5" name="c3-5" type="checkbox" />
+                            <span class="label">imgタグにwidth, heightを指定しCLSを防止しているか</span>
+                        </label>
+
+                        <label class="item" for="c3-6">
+                            <input id="c3-6" name="c3-6" type="checkbox" />
+                            <span class="label">どの画面幅でも表示崩れがないか</span>
+                        </label>
+
+                        <label class="item" for="c3-7">
+                            <input id="c3-7" name="c3-7" type="checkbox" />
+                            <span class="label">マルチブラウザ（iOS Safari / Android Chrome / Chrome / Firefox / Edge）で表示崩れがないか</span>
+                        </label>
+                    </form>
+                </section><!-- section3 end -->
+
+                <section class="section" aria-labelledby="sec1">
+                    <h2 class="section__hed2">4. 表示速度関係</h2>
+
+                    <div class="progress" aria-live="polite">
+                        <div class="bar" aria-hidden="true"><i></i></div>
+                        <div>
+                        <strong class="percent">0%</strong>
+                        <small class="countText">（0 / 6 完了）</small>
+                        </div>
+                    </div>
+
+                    <form id="checklist" class="list">
+                        <label class="item" for="c4-1">
+                            <input id="c4-1" name="c4-1" type="checkbox" />
+                            <span class="label">読み込みフォントは必要最低限のウェイトに絞っているか</span>
+                        </label>
+
+                        <label class="item" for="c4-2">
+                            <input id="c4-2" name="c4-2" type="checkbox" />
+                            <span class="label">画像サイズの圧縮をしているか</span>
+                        </label>
+
+                        <label class="item" for="c4-3">
+                            <input id="c4-3" name="c4-3" type="checkbox" />
+                            <span class="label">FV以外の画像にはloading=lazy, decoding=asyncを指定しているか</span>
+                        </label>
+
+                        <label class="item" for="c4-4">
+                            <input id="c4-4" name="c4-4" type="checkbox" />
+                            <span class="label">FV内の画像にはfetchprioruty=highを指定しているか</span>
+                        </label>
+
+                        <label class="item" for="c4-5">
+                            <input id="c4-5" name="c4-5" type="checkbox" />
+                            <span class="label">Google Fonts を利用する場合、preconnect を指定しているか</span>
+                        </label>
+
+                        <label class="item" for="c4-6">
+                            <input id="c4-6" name="c4-6" type="checkbox" />
+                            <span class="label">表示速度の検証を行なったか（Lighthouse / Pagepeed Insights等で）</span>
+                        </label>
+                    </form>
+                </section><!-- section3 end -->
+                <section class="cv-section">
+                    <div class="container">
+                        <a href="" class="cv__card">
+                            <figure class="cv__img"><img src="./images/" alt="" aria-hidden="true"></figure>
+                            <div class="cv__text">
+                                <h2 class="cv__text-ttl"></h2>
+                                <p class="cv__text-description">
+                                    
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__contents">
+                    <h3 class="footer__hed">Related Sites</h3>
+                    <ul class="footer__list">
+                        <li><a href="https://note.com/aganir_seshisa" target="_blank" rel="noopener noreferrer">note <img src="./images/open_new.svg" alt="" aria-hidden="true" width="24" height="24"></a></li>
+                        <li><a href="https://benzy78.github.io/DesignNotes/" target="_blank" rel="noopener noreferrer">DesignNotes <img src="./images/open_new.svg" alt="" aria-hidden="true" width="24" height="24"></a></li>
+                    </ul>
+                </div>
+                <p class="footer__copy">©2025 Yuki Nishimura. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
     <!--wrapper end-->
 
